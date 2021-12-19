@@ -1,0 +1,20 @@
+if enm1.x - player.x == -10 then
+        table.insert(bulletList, Bullet(player.x, player.y))
+    end
+
+if enm1.x - player.x == 10 then
+    bullet1.x = bullet1.x + bullet1.speed * dt
+end
+
+function Player:keyPressed(key)
+    if key == "space" then
+        table.insert(bulletList, Bullet(self.x + self.width/2, self.y + self.heigth/2, 20, 10))
+    end
+end
+
+ v.angle = math.atan2(player.y - v.y, player.x - v.x)
+        cos = math.cos(v.angle)
+        sin = math.sin(v.angle)
+
+        v.x = v.x + v.speed * cos * dt
+        v.y = v.y + v.speed * sin * dt
